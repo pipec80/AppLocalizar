@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppLocalizar</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Configuración</string>
+    <string name="localizar">Localizar</string>
+    <string name="titulo1">Listado de lugares</string>
+    <string name="txtlocal">Localización</string>
+    <string name="txtlat">Latitud</string>
+    <string name="txtlon">Longitud</string>
+    <string name="txtip">Ip</string>
+    <string name="from_date">Desde la fecha</string>
+
+
+</resources>
