@@ -27,15 +27,6 @@
         android:layout_marginTop="32dp"
         android:text="Buscar" />
 
-    <ListView
-        android:id="@+id/lv_buscar_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/btn_buscar"
-        android:layout_marginTop="27dp" >
-    </ListView>
-
     <EditText
         android:id="@+id/etxt_fromdate"
         android:layout_width="wrap_content"
@@ -58,5 +49,12 @@
         android:layout_below="@+id/textView1"
         android:text="Fecha" />
 
+    <ListView
+        android:id="@+id/lv_buscar_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_buscar" >
+    </ListView>
 
 </RelativeLayout>
