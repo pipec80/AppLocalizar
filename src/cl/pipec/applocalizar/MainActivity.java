@@ -42,7 +42,7 @@ public class MainActivity extends FragmentActivity implements
 		setContentView(R.layout.activity_main);		
 		//
 		startTimer();
-		// Initilization tabs
+		// inicialización de tabs
 		viewPager = (ViewPager) findViewById(R.id.pager);
 		actionBar = getActionBar();
 		mAdapter = new TabsPagerAdapter(getSupportFragmentManager());
@@ -51,12 +51,12 @@ public class MainActivity extends FragmentActivity implements
 		actionBar.setHomeButtonEnabled(false);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-		// Adding Tabs
+		// Añadiendo Tabs
 		for (String tab_name : tabs) {
 			actionBar.addTab(actionBar.newTab().setText(tab_name).setTabListener(this));
 		}
 		/**
-		 * on swiping the viewpager make respective tab selected
+		 * on swiping viewpager hacer respectiva tab seleccionada
 		 * */
 		viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
@@ -85,7 +85,7 @@ public class MainActivity extends FragmentActivity implements
 		initializeTimerTask();
 		// programar el temporizador, después de los primeros 5000ms el TimerTask se ejecutará
 		// cada 180000
-		timer.schedule(timerTask, 5000, 60000); //180000 60000 10000
+		timer.schedule(timerTask, 5000, 180000); //180000 60000 10000
 	}
 
 	public void stoptimertask(View v) {

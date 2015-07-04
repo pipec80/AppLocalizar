@@ -58,19 +58,25 @@ public class BuscarFragment extends Fragment {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				DataBase db = new DataBase(getActivity());
-				String fecha = fechaBuscar.getText().toString().trim();
-				String[] parts = fecha.split("-");
-				String fechaSql = parts[2] +"-"+parts[1]+"-"+parts[0];
-				ArrayList<GeoDatos> listado = db.BuscarLugaresFecha(fechaSql);
-				if (listado.isEmpty()) {
-					Toast.makeText(getActivity(), "sin datos",
+				if(fechaBuscar.getText().toString().isEmpty()){
+					Toast.makeText(getActivity(), "sin fecha",
 							Toast.LENGTH_LONG).show();
-				} else {
-					fechaBuscar.setText("");
-					lv_resultado.setAdapter(new ListaGeoAdapter(getActivity(),
-							listado));
+				}else{
+					DataBase db = new DataBase(getActivity());
+					String fecha = fechaBuscar.getText().toString().trim();
+					String[] parts = fecha.split("-");
+					String fechaSql = parts[2] +"-"+parts[1]+"-"+parts[0];
+					ArrayList<GeoDatos> listado = db.BuscarLugaresFecha(fechaSql);
+					if (listado.isEmpty()) {
+						Toast.makeText(getActivity(), "sin datos",
+								Toast.LENGTH_LONG).show();
+					} else {
+						fechaBuscar.setText("");
+						lv_resultado.setAdapter(new ListaGeoAdapter(getActivity(),
+								listado));
+					}
 				}
+				
 
 			}
 		});
